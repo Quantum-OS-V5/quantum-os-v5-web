@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quantum OS V5 — Powered by Stillmind Hub</title>
+  <meta name="description" content="Quantum OS V5 — Le système d'exploitation computationnel quantique. Made in RDC. Powered by Stillmind Hub." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="nav-header" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="assets/logo.jpg" alt="Quantum OS Logo" class="nav-logo-img" />
+        <span class="nav-brand">QUANTUM <span class="accent">OS</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#modules" class="nav-link" data-i18n="nav.modules">Modules</a>
+        <a href="#cas-usage" class="nav-link" data-i18n="nav.casusage">Cas d'usage</a>
+        <a href="#news" class="nav-link" data-i18n="nav.news">Actualités</a>
+        <a href="#documentation" class="nav-link" data-i18n="nav.docs">Documentation</a>
+        <a href="#equipe" class="nav-link" data-i18n="nav.team">Équipe</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ln">LN</button>
+        </div>
+        <a href="https://barackndega.gumroad.com/l/muips" target="_blank" rel="noopener" class="btn btn-primary btn-sm" data-i18n="btn.download">Télécharger</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+      <div class="hero-badge" data-i18n="hero.badge">V5 — Production Ready</div>
+      <div class="hero-logo-wrap">
+        <div class="hero-logo-glow"></div>
+        <img src="assets/logo.jpg" alt="Quantum OS Logo" class="hero-logo" />
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-quantum">QUANTUM</span>
+        <span class="hero-os">OS</span>
+        <span class="hero-v5">V5</span>
+      </h1>
+      <p class="hero-tagline" data-i18n="hero.tagline">L'Afrique innove sans permission</p>
+      <p class="hero-sub" data-i18n="hero.sub">Système d'exploitation computationnel quantique — Made in RDC 🇨🇩</p>
+      <p class="hero-powered">Powered by <strong>Stillmind Hub</strong></p>
+      <div class="hero-actions">
+        <a href="https://barackndega.gumroad.com/l/muips" target="_blank" rel="noopener" class="btn btn-primary" id="download">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12v8M8 16l4 4 4-4"/></svg>
+          <span data-i18n="btn.gumroad">Télécharger sur Gumroad</span>
+        </a>
+        <a href="https://drive.google.com/file/d/1fxby3r_SVCUoHSCJIGuCBTGzpkuF2rfM/view?usp=drivesdk" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12v8M8 16l4 4 4-4"/></svg>
+          Google Drive
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-dot green"></span><span data-i18n="hero.stat1">19/19 Tasks Successful</span></div>
+        <div class="stat"><span class="stat-dot cyan"></span><span data-i18n="hero.stat2">Zero Errors</span></div>
+        <div class="stat"><span class="stat-dot blue"></span><span data-i18n="hero.stat3">Production Ready</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-indicator"><span></span></div>
+      <p data-i18n="hero.scroll">Défiler</p>
+    </div>
+  </section>
+
+  <!-- FEATURES STRIP -->
+  <section class="features-strip">
+    <div class="strip-inner">
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        <span data-i18n="strip.latency">Ultra faible latence</span>
+      </div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span data-i18n="strip.security">Sécurité quantique</span>
+      </div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        <span data-i18n="strip.opensource">Open Source</span>
+      </div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <span data-i18n="strip.multiplatform">Multi-plateforme</span>
+      </div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <span data-i18n="strip.ai">IA intégrée</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULES -->
+  <section class="section modules" id="modules">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-i18n="modules.label">Architecture</span>
+        <h2 class="section-title"><span data-i18n="modules.title_pre">Modules</span> <span class="accent" data-i18n="modules.title_acc">Quantiques</span></h2>
+        <p class="section-desc" data-i18n="modules.desc">Une architecture modulaire conçue pour la performance et la résilience dans les environnements computationnels les plus exigeants.</p>
+      </div>
+      <div class="modules-grid">
+        <div class="module-card" data-delay="0">
+          <div class="module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 19.07a10 10 0 0 1 0-14.14"/></svg></div>
+          <h3>Quantum Kernel</h3>
+          <p data-i18n="mod1.desc">Noyau computationnel quantique avec gestion d'états superposés et intrication des processus en temps réel.</p>
+          <div class="module-tag">Core</div>
+        </div>
+        <div class="module-card" data-delay="100">
+          <div class="module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+          <h3>Neural Interface</h3>
+          <p data-i18n="mod2.desc">Interface neuronale adaptative permettant une interaction intuitive entre l'utilisateur et le système quantique.</p>
+          <div class="module-tag">UI/UX</div>
+        </div>
+        <div class="module-card" data-delay="200">
+          <div class="module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>CryptoShield</h3>
+          <p data-i18n="mod3.desc">Chiffrement post-quantique de niveau militaire protégeant toutes les communications et données sensibles.</p>
+          <div class="module-tag" data-i18n="tag.security">Sécurité</div>
+        </div>
+        <div class="module-card" data-delay="300">
+          <div class="module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <h3>QuantumAI Engine</h3>
+          <p data-i18n="mod4.desc">Moteur d'intelligence artificielle quantique capable de traiter des millions de paramètres simultanément.</p>
+          <div class="module-tag">IA</div>
+        </div>
+        <div class="module-card" data-delay="400">
+          <div class="module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <h3>NetQ Protocol</h3>
+          <p data-i18n="mod5.desc">Protocole réseau quantique offrant des communications instantanées et inviolables à l'échelle mondiale.</p>
+          <div class="module-tag" data-i18n="tag.network">Réseau</div>
+        </div>
+        <div class="module-card" data-delay="500">
+          <div class="module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+          <h3>Q-Storage</h3>
+          <p data-i18n="mod6.desc">Stockage quantique distribué avec redondance holographique et accès instantané aux données.</p>
+          <div class="module-tag" data-i18n="tag.storage">Stockage</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAS D'USAGE -->
+  <section class="section cas-usage dark-section" id="cas-usage">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-i18n="usage.label">Applications</span>
+        <h2 class="section-title"><span data-i18n="usage.title_pre">Cas</span> <span class="accent" data-i18n="usage.title_acc">d'Usage</span></h2>
+        <p class="section-desc" data-i18n="usage.desc">Quantum OS V5 transforme les industries critiques grâce à sa puissance computationnelle sans précédent.</p>
+      </div>
+      <div class="usage-grid">
+        <div class="usage-card">
+          <div class="usage-number">01</div>
+          <div class="usage-content"><h3 data-i18n="use1.title">Recherche Scientifique</h3><p data-i18n="use1.desc">Simulation moléculaire, modélisation climatique et calculs de physique quantique en temps réel, réduisant les temps de traitement de 10 000x.</p></div>
+        </div>
+        <div class="usage-card">
+          <div class="usage-number">02</div>
+          <div class="usage-content"><h3 data-i18n="use2.title">Finance Quantique</h3><p data-i18n="use2.desc">Optimisation de portefeuilles, détection de fraude et modélisation des risques financiers avec une précision quantique inégalée.</p></div>
+        </div>
+        <div class="usage-card">
+          <div class="usage-number">03</div>
+          <div class="usage-content"><h3 data-i18n="use3.title">Santé & Génomique</h3><p data-i18n="use3.desc">Analyse du génome humain, découverte de médicaments et diagnostic médical assisté par IA quantique en quelques secondes.</p></div>
+        </div>
+        <div class="usage-card">
+          <div class="usage-number">04</div>
+          <div class="usage-content"><h3 data-i18n="use4.title">Infrastructure Critique</h3><p data-i18n="use4.desc">Protection des réseaux électriques, systèmes de transport et infrastructures gouvernementales avec un chiffrement post-quantique.</p></div>
+        </div>
+        <div class="usage-card">
+          <div class="usage-number">05</div>
+          <div class="usage-content"><h3 data-i18n="use5.title">Éducation & Recherche</h3><p data-i18n="use5.desc">Plateforme éducative quantique pour former la prochaine génération d'ingénieurs et scientifiques africains.</p></div>
+        </div>
+        <div class="usage-card">
+          <div class="usage-number">06</div>
+          <div class="usage-content"><h3 data-i18n="use6.title">Défense & Souveraineté</h3><p data-i18n="use6.desc">Solutions souveraines pour la sécurité nationale avec des communications inviolables et une cryptographie quantique.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTUALITÉS & NEWSLETTER -->
+  <section class="section news-section" id="news">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-i18n="news.label">Actualités</span>
+        <h2 class="section-title"><span data-i18n="news.title_pre">Dernières</span> <span class="accent" data-i18n="news.title_acc">Nouvelles</span></h2>
+        <p class="section-desc" data-i18n="news.desc">Restez informé des avancées de Quantum OS V5 et des innovations de Stillmind Hub.</p>
+      </div>
+      <div class="news-layout">
+        <div class="news-articles">
+          <article class="news-card featured">
+            <div class="news-meta">
+              <span class="news-label" data-i18n="news1.tag">Annonce Majeure</span>
+              <span class="news-date">15 Mai 2026</span>
+            </div>
+            <h3 data-i18n="news1.title">Quantum OS V5 : Le système d'exploitation du futur est là</h3>
+            <p data-i18n="news1.desc">Après deux ans de développement intensif, Stillmind Hub annonce officiellement le lancement de Quantum OS V5, une révolution dans le domaine des systèmes d'exploitation computationnels quantiques made in Africa.</p>
+            <a href="#" class="news-link" data-i18n="news.read">Lire la suite →</a>
+          </article>
+          <article class="news-card">
+            <div class="news-meta">
+              <span class="news-label" data-i18n="news2.tag">Technologie</span>
+              <span class="news-date">10 Mai 2026</span>
+            </div>
+            <h3 data-i18n="news2.title">Le Quantum Kernel atteint une performance record de 99.97% d'uptime</h3>
+            <p data-i18n="news2.desc">Nos équipes ont validé les benchmarks de performance du nouveau noyau quantique sur des environnements de production à grande échelle.</p>
+            <a href="#" class="news-link" data-i18n="news.read">Lire la suite →</a>
+          </article>
+          <article class="news-card">
+            <div class="news-meta">
+              <span class="news-label" data-i18n="news3.tag">Partenariat</span>
+              <span class="news-date">2 Mai 2026</span>
+            </div>
+            <h3 data-i18n="news3.title">Stillmind Hub signe un accord avec trois universités africaines</h3>
+            <p data-i18n="news3.desc">Dans le cadre de la mission éducative de Quantum OS, Stillmind Hub s'associe avec des institutions académiques de premier plan pour intégrer la technologie quantique dans les cursus.</p>
+            <a href="#" class="news-link" data-i18n="news.read">Lire la suite →</a>
+          </article>
+        </div>
+        <div class="newsletter-box">
+          <div class="newsletter-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <h3 data-i18n="nl.title">Newsletter Quantum OS</h3>
+          <p data-i18n="nl.desc">Soyez le premier informé des mises à jour, nouvelles fonctionnalités et événements exclusifs.</p>
+          <form class="newsletter-form" id="newsletterForm" onsubmit="handleNewsletter(event)">
+            <div class="form-group"><label for="nl-name" data-i18n="form.name">Nom complet</label><input type="text" id="nl-name" placeholder="Votre nom" required /></div>
+            <div class="form-group"><label for="nl-email" data-i18n="form.email">Adresse email</label><input type="email" id="nl-email" placeholder="votre@email.com" required /></div>
+            <div class="form-group">
+              <label for="nl-interest" data-i18n="form.interest">Domaine d'intérêt</label>
+              <select id="nl-interest">
+                <option value="" data-i18n="form.select">Sélectionner...</option>
+                <option value="dev" data-i18n="form.dev">Développement</option>
+                <option value="research" data-i18n="form.research">Recherche</option>
+                <option value="business" data-i18n="form.business">Entreprise</option>
+                <option value="education" data-i18n="form.education">Éducation</option>
+                <option value="security" data-i18n="form.security_opt">Cybersécurité</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span data-i18n="nl.subscribe">S'abonner à la newsletter</span>
+            </button>
+            <p class="form-privacy" data-i18n="form.privacy">Vos données sont protégées. Désinscription possible à tout moment.</p>
+          </form>
+          <div class="newsletter-success" id="newsletterSuccess">
+            <div class="success-icon">✓</div>
+            <h4 data-i18n="nl.success_title">Inscription confirmée !</h4>
+            <p data-i18n="nl.success_desc">Bienvenue dans la communauté Quantum OS. Vous recevrez nos prochaines actualités directement dans votre boîte mail.</p>
+          </div>
+        </div>
+      </div>
+      <div class="submit-news">
+        <h3 data-i18n="submit.title">Soumettre une actualité</h3>
+        <p data-i18n="submit.desc">Vous avez une information à partager avec la communauté Quantum OS ?</p>
+        <form class="submit-form" id="submitNewsForm" onsubmit="handleSubmitNews(event)">
+          <div class="form-row">
+            <div class="form-group"><label for="sn-name" data-i18n="form.org">Nom / Organisation</label><input type="text" id="sn-name" placeholder="Votre nom ou organisation" required /></div>
+            <div class="form-group"><label for="sn-email" data-i18n="form.contact_email">Email de contact</label><input type="email" id="sn-email" placeholder="contact@organisation.com" required /></div>
+          </div>
+          <div class="form-group"><label for="sn-title" data-i18n="form.news_title">Titre de l'actualité</label><input type="text" id="sn-title" placeholder="Titre de votre actualité" required /></div>
+          <div class="form-group"><label for="sn-content" data-i18n="form.content">Contenu</label><textarea id="sn-content" rows="4" placeholder="Décrivez votre actualité en détail..." required></textarea></div>
+          <div class="form-group">
+            <label for="sn-category" data-i18n="form.category">Catégorie</label>
+            <select id="sn-category" required>
+              <option value="" data-i18n="form.choose_cat">Choisir une catégorie</option>
+              <option value="announcement" data-i18n="cat.announcement">Annonce</option>
+              <option value="tech" data-i18n="cat.tech">Technologie</option>
+              <option value="event" data-i18n="cat.event">Événement</option>
+              <option value="partnership" data-i18n="cat.partnership">Partenariat</option>
+              <option value="research" data-i18n="cat.research">Recherche</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-outline" data-i18n="submit.btn">Soumettre pour révision</button>
+        </form>
+        <div class="submit-success" id="submitSuccess">
+          <div class="success-icon">✓</div>
+          <h4 data-i18n="submit.success_title">Merci pour votre contribution !</h4>
+          <p data-i18n="submit.success_desc">Votre actualité a été soumise pour révision. Notre équipe vous contactera sous 48h.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCUMENTATION -->
+  <section class="section documentation dark-section" id="documentation">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-i18n="docs.label">Ressources</span>
+        <h2 class="section-title">Docu<span class="accent">mentation</span></h2>
+        <p class="section-desc" data-i18n="docs.desc">Tout ce dont vous avez besoin pour démarrer avec Quantum OS V5.</p>
+      </div>
+
+      <div class="docs-tabs">
+        <button class="docs-tab active" data-tab="architecture" data-i18n="docs.tab.arch">Architecture</button>
+        <button class="docs-tab" data-tab="modules-list" data-i18n="docs.tab.modules">Modules</button>
+        <button class="docs-tab" data-tab="install" data-i18n="docs.tab.install">Installation</button>
+        <button class="docs-tab" data-tab="usage-api" data-i18n="docs.tab.usage">Utilisation</button>
+        <button class="docs-tab" data-tab="config" data-i18n="docs.tab.config">Configuration</button>
+      </div>
+
+      <!-- TAB: ARCHITECTURE -->
+      <div class="docs-panel active" id="tab-architecture">
+        <div class="arch-header">
+          <h3 data-i18n="arch.title">Hybrid Quantum-Classical Operating System</h3>
+          <p data-i18n="arch.sub">Reinforcement Learning Scheduler · GRAPE Optimal Control · Surface Code QEC · Photonic Validation · GPU/CUDA · gRPC Cluster · Raft Consensus · DAG Pipelines · mTLS · OpenTelemetry</p>
+        </div>
+        <pre class="code-block arch-diagram">┌─────────────────────────────────────────────────────────────────┐
+│                        QUANTUM OS v5                             │
+├─────────────────────────────────────────────────────────────────┤
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────┐    │
+│  │   Kernel    │  │  Scheduler  │  │  Resource Manager   │    │
+│  │  (async)    │  │  (RL/PG)    │  │  (CPU/GPU/Qubits)   │    │
+│  └──────┬──────┘  └──────┬──────┘  └──────────┬──────────┘    │
+│         │                 │                     │               │
+│  ┌──────┴─────────────────┴─────────────────────┴──────────┐   │
+│  │                    Engine Layer                           │   │
+│  ├──────────────┬──────────────────┬───────────────────────┤   │
+│  │ Transformer  │    Photonic      │   Quantum Controller  │   │
+│  │ (PyTorch)    │   (Validator)    │   (GRAPE + QEC)       │   │
+│  └──────────────┴──────────────────┴───────────────────────┘   │
+│                                                                 │
+│  ┌──────────┐ ┌──────────┐ ┌─────────┐ ┌──────────────────┐   │
+│  │   GPU    │ │ Cluster  │ │ Sandbox │ │    Security      │   │
+│  │  (CUDA)  │ │ (gRPC)   │ │(Process)│ │  (mTLS+Audit)   │   │
+│  └──────────┘ └──────────┘ └─────────┘ └──────────────────┘   │
+│                                                                 │
+│  ┌──────────┐ ┌──────────┐ ┌─────────┐ ┌──────────────────┐   │
+│  │ Pipeline │ │ Network  │ │Telemetry│ │    Plugins       │   │
+│  │  (DAG)   │ │ (ZeroMQ) │ │(OTel)   │ │  (Hot-reload)   │   │
+│  └──────────┘ └──────────┘ └─────────┘ └──────────────────┘   │
+└─────────────────────────────────────────────────────────────────┘</pre>
+        <div class="arch-badges">
+          <span class="arch-badge">Python 3.10+</span>
+          <span class="arch-badge">PyTorch AMP</span>
+          <span class="arch-badge">CUDA 11.8+</span>
+          <span class="arch-badge">gRPC</span>
+          <span class="arch-badge">Raft Consensus</span>
+          <span class="arch-badge">ZeroMQ</span>
+          <span class="arch-badge">OpenTelemetry</span>
+          <span class="arch-badge">mTLS / JWT</span>
+          <span class="arch-badge">Prometheus</span>
+          <span class="arch-badge">Grafana</span>
+          <span class="arch-badge">Docker</span>
+        </div>
+      </div>
+
+      <!-- TAB: MODULES LIST -->
+      <div class="docs-panel" id="tab-modules-list">
+        <div class="modules-table-wrap">
+          <table class="modules-table">
+            <thead>
+              <tr>
+                <th data-i18n="table.module">Module</th>
+                <th data-i18n="table.file">Fichier</th>
+                <th data-i18n="table.desc">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Kernel</strong></td><td><code>core/kernel.py</code></td><td data-i18n="m.kernel">Noyau async avec pool de workers, auto-scaling, checkpointing</td></tr>
+              <tr><td><strong>Scheduler RL</strong></td><td><code>core/scheduler.py</code></td><td data-i18n="m.scheduler">Policy Gradient (REINFORCE) avec entropy regularization</td></tr>
+              <tr><td><strong>Resource Manager</strong></td><td><code>core/resource_manager.py</code></td><td data-i18n="m.resource">Gestion CPU/GPU/Mémoire/Qubits avec allocation dynamique</td></tr>
+              <tr><td><strong>Telemetry</strong></td><td><code>core/monitor.py</code></td><td data-i18n="m.telemetry">Métriques Prometheus, histogrammes, alerting</td></tr>
+              <tr><td><strong>Transformer Engine</strong></td><td><code>engines/transformer_engine.py</code></td><td data-i18n="m.transformer">Réseau neuronal PyTorch avec mixed-precision AMP</td></tr>
+              <tr><td><strong>Photonic Validator</strong></td><td><code>engines/photonic_validator.py</code></td><td data-i18n="m.photonic">Simulation photonique (HOM, unitarité, dark counts)</td></tr>
+              <tr><td><strong>Quantum Controller</strong></td><td><code>engines/quantum_controller.py</code></td><td data-i18n="m.qcontroller">GRAPE optimal control + Surface Code QEC</td></tr>
+              <tr><td><strong>GPU/CUDA</strong></td><td><code>gpu/cuda_manager.py</code></td><td data-i18n="m.gpu">Binding CUDA, allocation mémoire, multi-GPU</td></tr>
+              <tr><td><strong>Cluster gRPC</strong></td><td><code>cluster/grpc_cluster.py</code></td><td data-i18n="m.cluster">Cluster distribué avec consensus Raft</td></tr>
+              <tr><td><strong>Sandbox</strong></td><td><code>sandbox/container.py</code></td><td data-i18n="m.sandbox">Isolation process/cgroup/namespace</td></tr>
+              <tr><td><strong>Security</strong></td><td><code>security/security_layer.py</code></td><td data-i18n="m.security">mTLS, tokens JWT, audit trail</td></tr>
+              <tr><td><strong>Pipeline DAG</strong></td><td><code>pipeline/dag_executor.py</code></td><td data-i18n="m.pipeline">Exécution DAG parallèle avec retry</td></tr>
+              <tr><td><strong>Message Bus</strong></td><td><code>network/zeromq_bus.py</code></td><td data-i18n="m.bus">ZeroMQ PUB/SUB, REQ/REP, PUSH/PULL</td></tr>
+              <tr><td><strong>Tracing</strong></td><td><code>telemetry/tracing.py</code></td><td data-i18n="m.tracing">OpenTelemetry spans + AlertManager</td></tr>
+              <tr><td><strong>Plugins</strong></td><td><code>plugins/plugin_system.py</code></td><td data-i18n="m.plugins">Système de plugins hot-reload</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB: INSTALLATION -->
+      <div class="docs-panel" id="tab-install">
+        <div class="install-grid">
+          <div class="install-card">
+            <h3 data-i18n="install.local">Installation Locale</h3>
+            <p data-i18n="install.local_desc">Prérequis : Python 3.10+, (optionnel) NVIDIA GPU + CUDA 11.8+</p>
+            <pre class="code-block"><span class="c"># 1. Extraire l'archive</span>
+cd quantum_os_v5
+
+<span class="c"># 2. Environnement virtuel</span>
+python3 -m venv venv
+source venv/bin/activate   <span class="c"># Linux/Mac</span>
+<span class="c"># venv\Scripts\activate    # Windows</span>
+
+<span class="c"># 3. Dépendances</span>
+pip install -r requirements.txt
+
+<span class="c"># 4. (Optionnel) GPU CUDA</span>
+pip install cupy-cuda12x</pre>
+          </div>
+          <div class="install-card">
+            <h3 data-i18n="install.docker">Docker <span class="badge-recommended" data-i18n="install.recommended">Recommandé</span></h3>
+            <p data-i18n="install.docker_desc">Production-ready avec monitoring intégré (Prometheus, Grafana, Jaeger).</p>
+            <pre class="code-block"><span class="c"># Single node</span>
+docker build -t quantum-os:v5 .
+docker run -it --gpus all quantum-os:v5
+
+<span class="c"># Cluster 3 nodes + monitoring</span>
+docker-compose up --build</pre>
+          </div>
+          <div class="install-card">
+            <h3 data-i18n="install.modes">Modes de démarrage</h3>
+            <pre class="code-block"><span class="c"># Demo (test rapide)</span>
+python main.py --demo
+
+<span class="c"># Production</span>
+python main.py --config config/default.yaml \
+               --mode production
+
+<span class="c"># Cluster — Node 0 (leader)</span>
+QOS_NODE_ID=node-0 python main.py \
+  --cluster --port 50051
+
+<span class="c"># Cluster — Node 1</span>
+QOS_NODE_ID=node-1 \
+QOS_CLUSTER_SEEDS=node-0:50051 \
+python main.py --cluster --port 50052</pre>
+          </div>
+          <div class="install-card">
+            <h3 data-i18n="install.monitoring">Monitoring</h3>
+            <p data-i18n="install.monitoring_desc">Disponible avec Docker Compose :</p>
+            <div class="monitor-links">
+              <span class="monitor-link"><span class="monitor-dot prom"></span>Prometheus <code>:9093</code></span>
+              <span class="monitor-link"><span class="monitor-dot graf"></span>Grafana <code>:3000</code> <em data-i18n="install.grafana_creds">admin / quantum-admin</em></span>
+              <span class="monitor-link"><span class="monitor-dot jaeg"></span>Jaeger <code>:16686</code></span>
+            </div>
+            <pre class="code-block"><span class="c"># Tests</span>
+pip install pytest pytest-asyncio pytest-cov
+pytest tests/ -v --cov=.</pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: USAGE API -->
+      <div class="docs-panel" id="tab-usage-api">
+        <div class="usage-api-grid">
+          <div class="usage-api-card">
+            <h3 data-i18n="api.basic">Soumettre des tâches</h3>
+            <pre class="code-block">import asyncio
+from core.kernel import QuantumKernel
+from core.task import QuantumTask, TaskPriority
+
+async def main():
+    kernel = QuantumKernel()
+    
+    <span class="c"># Register engines</span>
+    from engines.transformer_engine import TransformerEngine
+    from engines.quantum_controller import QuantumController
+    kernel.register_engine("transformer", TransformerEngine({}))
+    kernel.register_engine("quantum",
+        QuantumController({"num_qubits": 5}))
+    
+    await kernel.boot()
+    
+    task = QuantumTask(
+        id="my-task-1",
+        type="transformer",
+        data=[1.0, 2.0, 3.0, 4.0],
+        priority=TaskPriority.HIGH,
+    )
+    kernel.submit_task(task)
+    await kernel.run(num_workers=4, runtime=30)
+
+asyncio.run(main())</pre>
+          </div>
+          <div class="usage-api-card">
+            <h3 data-i18n="api.dag">Pipeline DAG</h3>
+            <pre class="code-block">from pipeline.dag_executor import (
+    DAGExecutor, PipelineNode
+)
+
+dag = DAGExecutor()
+dag.add_node(PipelineNode(
+    id="preprocess",
+    task_type="transformer",
+    data=my_data
+))
+dag.add_node(PipelineNode(
+    id="quantum_opt",
+    task_type="quantum",
+    dependencies=["preprocess"]
+))
+dag.add_node(PipelineNode(
+    id="validate",
+    task_type="photonic",
+    dependencies=["quantum_opt"]
+))
+
+result = await dag.execute(my_execute_fn)
+print(f"Done: {result.nodes_completed}",
+      f"Failed: {result.nodes_failed}")</pre>
+          </div>
+          <div class="usage-api-card full-width">
+            <h3 data-i18n="api.env">Variables d'Environnement</h3>
+            <div class="env-table-wrap">
+              <table class="modules-table">
+                <thead>
+                  <tr><th data-i18n="env.var">Variable</th><th data-i18n="env.desc">Description</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>QOS_MODE</code></td><td data-i18n="env.mode">production / development / testing</td></tr>
+                  <tr><td><code>QOS_LOG_LEVEL</code></td><td data-i18n="env.log">DEBUG / INFO / WARNING / ERROR</td></tr>
+                  <tr><td><code>QOS_WORKERS</code></td><td data-i18n="env.workers">Nombre de workers</td></tr>
+                  <tr><td><code>QOS_GPU_ENABLED</code></td><td data-i18n="env.gpu">Activer/désactiver GPU</td></tr>
+                  <tr><td><code>QOS_CLUSTER_ENABLED</code></td><td data-i18n="env.cluster">Activer mode cluster</td></tr>
+                  <tr><td><code>QOS_CLUSTER_PORT</code></td><td data-i18n="env.port">Port du cluster</td></tr>
+                  <tr><td><code>QOS_NODE_ID</code></td><td data-i18n="env.node">ID du noeud dans le cluster</td></tr>
+                  <tr><td><code>QOS_CLUSTER_SEEDS</code></td><td data-i18n="env.seeds">Seeds pour rejoindre le cluster</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: CONFIGURATION -->
+      <div class="docs-panel" id="tab-config">
+        <p class="config-intro" data-i18n="config.intro">Fichier principal : <code>config/default.yaml</code></p>
+        <pre class="code-block config-block">system:
+  name: "QuantumOS-v5"
+  mode: production       <span class="c"># production | development | testing</span>
+  log_level: INFO
+
+kernel:
+  max_workers: 16
+  runtime: 0             <span class="c"># 0 = run forever</span>
+
+scheduler:
+  learning_rate: 0.001
+  gamma: 0.99
+  state_dim: 64
+  hidden_dim: 256
+  entropy_coeff: 0.01
+
+resources:
+  cpu_cores: 16
+  gpu_devices: 4
+  memory_gb: 64
+  quantum_qubits: 128
+  photonic_channels: 16
+
+gpu:
+  enabled: true
+  mixed_precision: true
+  fallback_cpu: true
+
+cluster:
+  enabled: true
+  port: 50051
+  node_id: node-0
+  seeds: []
+
+sandbox:
+  enabled: true
+  backend: process       <span class="c"># process | cgroup | namespace</span>
+  memory_limit_mb: 512
+  timeout_seconds: 300</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÉQUIPE -->
+  <section class="section equipe" id="equipe">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-i18n="team.label">Les Bâtisseurs</span>
+        <h2 class="section-title"><span data-i18n="team.title_pre">Notre</span> <span class="accent" data-i18n="team.title_acc">Équipe</span></h2>
+        <p class="section-desc" data-i18n="team.desc">Des visionnaires africains qui réinventent l'informatique du futur depuis Kinshasa.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar"><div class="avatar-placeholder">SM</div></div>
+          <h3>Stillmind Hub</h3>
+          <p class="team-role" data-i18n="team1.role">Fondateur & Architecte Principal</p>
+          <p class="team-bio" data-i18n="team1.bio">Visionnaire à l'origine du projet Quantum OS, architecte de la vision quantique pour l'Afrique.</p>
+          <div class="team-tags"><span>Quantum Computing</span><span>IA</span></div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><div class="avatar-placeholder" style="background: linear-gradient(135deg, #00bcd4, #0097a7);">QE</div></div>
+          <h3 data-i18n="team2.name">Équipe Quantum</h3>
+          <p class="team-role" data-i18n="team2.role">Ingénieurs & Chercheurs</p>
+          <p class="team-bio" data-i18n="team2.bio">Une équipe d'ingénieurs passionnés développant les modules quantiques de dernière génération.</p>
+          <div class="team-tags"><span>Engineering</span><span>Research</span></div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><div class="avatar-placeholder" style="background: linear-gradient(135deg, #7c4dff, #651fff);">OS</div></div>
+          <h3>Open Source Community</h3>
+          <p class="team-role" data-i18n="team3.role">Contributeurs Mondiaux</p>
+          <p class="team-bio" data-i18n="team3.bio">Des centaines de contributeurs à travers l'Afrique et le monde entier enrichissent le projet.</p>
+          <div class="team-tags"><span>Open Source</span><span>Global</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section class="section cta-section dark-section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-glow"></div>
+        <img src="assets/logo.jpg" alt="Quantum OS" class="cta-logo" />
+        <h2 data-i18n="cta.title">Prêt à entrer dans l'ère quantique ?</h2>
+        <p data-i18n="cta.desc">Rejoignez la révolution technologique africaine. Quantum OS V5 est disponible maintenant.</p>
+        <p class="cta-powered">Powered by <strong>Stillmind Hub</strong></p>
+        <div class="cta-actions">
+          <a href="https://barackndega.gumroad.com/l/muips" target="_blank" rel="noopener" class="btn btn-primary">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12v8M8 16l4 4 4-4"/></svg>
+            <span data-i18n="btn.gumroad">Télécharger sur Gumroad</span>
+          </a>
+          <a href="https://drive.google.com/file/d/1fxby3r_SVCUoHSCJIGuCBTGzpkuF2rfM/view?usp=drivesdk" target="_blank" rel="noopener" class="btn btn-outline">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12v8M8 16l4 4 4-4"/></svg>
+            Google Drive
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo.jpg" alt="Quantum OS" class="footer-logo" />
+          <div>
+            <h3 class="footer-title">QUANTUM OS <span class="accent">V5</span></h3>
+            <p class="footer-subtitle">Powered by <strong>Stillmind Hub</strong></p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4 data-i18n="footer.product">Produit</h4>
+            <a href="#modules" data-i18n="nav.modules">Modules</a>
+            <a href="#documentation" data-i18n="nav.docs">Documentation</a>
+            <a href="https://barackndega.gumroad.com/l/muips" target="_blank" rel="noopener" data-i18n="btn.download">Télécharger</a>
+            <a href="#news" data-i18n="nav.news">Actualités</a>
+          </div>
+          <div class="footer-col">
+            <h4 data-i18n="footer.company">Entreprise</h4>
+            <a href="#equipe" data-i18n="nav.team">Équipe</a>
+            <a href="#cas-usage" data-i18n="nav.casusage">Cas d'usage</a>
+            <a href="#" data-i18n="footer.about">À propos</a>
+            <a href="#" data-i18n="footer.careers">Carrières</a>
+          </div>
+          <div class="footer-col">
+            <h4 data-i18n="footer.legal">Légal</h4>
+            <a href="#" data-i18n="footer.licence">Licence</a>
+            <a href="#" data-i18n="footer.privacy">Confidentialité</a>
+            <a href="#" data-i18n="footer.terms">CGU</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Quantum OS V5 — Made in RDC 🇨🇩 — Powered by <strong>Stillmind Hub</strong></p>
+        <p class="footer-tagline" data-i18n="hero.tagline">L'Afrique innove sans permission.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
